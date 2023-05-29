@@ -1,32 +1,20 @@
-import "./App.css";
-import { useState } from "react";
-import { createContext } from "react";
-// import NewPassword from "./components/NewPassword";
-import Homepage from "./components/Homepage.js";
+import React from 'react';
+import LoginForm from './components/LoginForm';
 
-export const homepageContext = createContext();
 
-function App() {
-  const [displayProfile, setDisplayProfile] = useState(false);
-  const [displayEditModal, setDisplayEditModal] = useState(false);
-  const [displayPasswordModal, setDisplayPasswordModal] = useState(false);
 
-  const contextValues = {
-    displayProfile,
-    setDisplayProfile,
-    displayEditModal,
-    setDisplayEditModal,
-    displayPasswordModal,
-    setDisplayPasswordModal,
-  };
+const App = () => {
   return (
     <div className="app">
-      {/* <NewPassword/> */}
-      <homepageContext.Provider value={contextValues}>
-        <Homepage />
-      </homepageContext.Provider>
+      <LoginForm />
     </div>
   );
-}
+};
 
 export default App;
+
+
+
+
+
+
