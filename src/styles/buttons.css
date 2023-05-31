@@ -1,0 +1,21 @@
+button {
+  background-color: #6750a4;
+  border-color: transparent;
+  padding: 0.7rem 0;
+  align-self: center;
+}
+
+button.button-large {
+  width: 60%;
+  color: white;
+}
+button.button-pill {
+  font-size: 2rem;
+  border-radius: 2rem;
+  width: 50%;
+  font-weight: bold;
+}
+.button-pill_editProfileName{
+   color: white;
+   margin-top: 4rem;
+}

@@ -4,15 +4,11 @@ import { createContext } from "react";
 import Homepage from "./components/Homepage";
 export const homepageContext = createContext();
 function App() {
-
-
   return (
     <div className="app">
-      {/* {/* <NewPassword /> */}
+      {/* <NewPassword /> */}
 
-  
-        <Homepage />
-
+      <Homepage />
     </div>
   );
 }

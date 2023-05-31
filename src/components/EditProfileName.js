@@ -1,13 +1,15 @@
 import React from "react";
 import ReactModal from "react-modal";
-import { useSelector, useDispatch } from "react-redux";
-import { displayedProfileEdit } from "../redux/slices/profileSlice";
 import "../styles/editProfile.css";
+import { useSelector, useDispatch } from "react-redux";
+import { closedProfileEdit } from "../redux/slices/profileSlice";
 import { editprofileNameModal } from "../styles/allModals";
+import { ButtonPill } from "./Buttons";
 import { useForm } from "react-hook-form";
 import editNameIcon from "../images/editname.svg";
 import editMailIcon from "../images/mail-icon.png";
 import clearEdit from "../images/clearEdit.svg";
+import close from "../images/close.svg";
 
 function EditProfileModal() {
   const { register, handleSubmit } = useForm();
@@ -17,7 +19,7 @@ function EditProfileModal() {
   }
   const dispatch = useDispatch();
   function closeProfileEdit() {
-    dispatch(displayedProfileEdit());
+    dispatch(closedProfileEdit());
   }
 
   return (
@@ -27,6 +29,12 @@ function EditProfileModal() {
       onRequestClose={closeProfileEdit}
       style={editprofileNameModal}
     >
+      <img
+        src={close}
+        alt="close icon"
+        className="closeEditProfile-icon"
+        onClick={closeProfileEdit}
+      />
       <h2 className="editProfile_heading">Your Details</h2>
       <form className="editProfile_form" onSubmit={handleSubmit(editSubmit)}>
         <label htmlFor="edit-name" className="editProfile_title">
@@ -42,7 +50,6 @@ function EditProfileModal() {
           />
           <img src={editNameIcon} alt="edit name icon" className="icon-start" />
           <img src={clearEdit} alt="clear edit icon" className="icon-end" />
-
         </div>
         <label htmlFor="edit-email" className="editProfile_title">
           Email
@@ -61,12 +68,12 @@ function EditProfileModal() {
               },
             })}
           />
+          <img src={editMailIcon} alt="edit name icon" className="icon-start" />
+          <img src={clearEdit} alt="clear edit icon" className="icon-end" />
         </div>
-        <button type="submit" className="edit-profile_submit">
-          SUBMIT
-        </button>
+
+        <ButtonPill text="Submit" className="button-pill_editProfileName" />
       </form>
-      <button onClick={closeProfileEdit}>CLOSE MODAL</button>
     </ReactModal>
   );
 }

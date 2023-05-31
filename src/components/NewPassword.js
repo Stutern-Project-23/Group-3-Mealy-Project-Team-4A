@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/newpassword.css";
+
 import Privacy from "../images/privacy.svg";
 import { useForm } from "react-hook-form";
-import ButtonLarge from "./ButtonLarge";
+import ButtonLarge from "./Buttons";
 
 function NewPassword() {
   const {
