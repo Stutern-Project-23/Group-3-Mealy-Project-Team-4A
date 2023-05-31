@@ -82,16 +82,23 @@ code {
   margin-bottom: 5px;
 
 }
-.google_btn{
-  background-color: #f8f5f5;
+#google_btn{
+  border: 1px solid rgb(1, 1, 1) ;
+  background-color: white;
   color: black;
+  font-size: 16px;
+  cursor: pointer;
   width: 100%;
-  border: 1px solid black;
-  
+  display:flex;
+  justify-content:center;
+  position: relative;
+;
+ 
 }
-.google_btn img{
-  display: inline-flex;
-  justify-content: flex-start;
+.google_icon{
+  position: absolute;
+  left:27%;
 }
+
 
 

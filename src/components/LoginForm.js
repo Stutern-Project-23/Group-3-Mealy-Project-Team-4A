@@ -48,9 +48,9 @@ const LoginForm = () => {
         <button  className='btn' type="submit">Login</button>
       </form>
       
-      <button className='google_btn'>
-        <img src={google_logo} alt='google'/>
-        Login with Gmail</button>
+      <button id='google_btn'>
+        <img className='google_icon' src={google_logo} alt='google'/>
+        Continue with Gmail</button>
     </div>
   );
 };
