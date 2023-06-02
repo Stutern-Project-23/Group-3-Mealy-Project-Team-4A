@@ -30,24 +30,17 @@ you can resolve the conflicts before starting your new task
 
 ## Working with the styles folder
 
-- In the **styles** folder,create a folder and name it 
-
-- In your named folder,start creating your needed css files
+- In the **styles** folder,create your css file with the same name as your component
 
 **The folder structure is below**
 
 ```
 - styles
-    - teamMemberName-styles
+  
         - Header.css
         - Button.css
 
-E.g
-- styles
-    -pamela-styles
-        - Header.css
-        - Button.css
-         
+
 ```
 
 ## Testing using React-Testing-Library and Jest
