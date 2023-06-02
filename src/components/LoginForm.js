@@ -29,7 +29,7 @@ const LoginForm = () => {
       <p>
         Don't have an account? <Link to="/signup">Sign up</Link>
       </p>
-      <img id='mealy' src={mealy} alt='mealy'/>
+      <img className='login_img'  src={mealy} alt='mealy'/>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
         <img className='img' src={mail} alt='mail'/>
@@ -48,7 +48,7 @@ const LoginForm = () => {
         <button  className='btn' type="submit">Login</button>
       </form>
       
-      <button id='google_btn'>
+      <button id ='google_btn'>
         <img className='google_icon' src={google_logo} alt='google'/>
         Continue with Gmail</button>
     </div>
