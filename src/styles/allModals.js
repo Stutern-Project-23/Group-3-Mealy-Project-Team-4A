@@ -4,8 +4,9 @@ export const editprofileNameModal = {
     background: "#6650a495",
   },
   content: {
-    width: "50%",
-    height: "50vh",
+    width: "90%",
+    maxWidth:"70rem",
+    height: "55vh",
     position: "absolute",
     top: "50%",
     left: "50%",

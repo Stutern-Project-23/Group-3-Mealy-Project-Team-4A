@@ -1,16 +1,17 @@
 .profile {
-  height: auto;
-  width: 30%;
+  height: 90vh;
+  width: 100%;
+  max-width: 40rem;
   background-color: white;
   position: fixed;
+  overflow:scroll;
   top: 10rem;
   right: 0;
-  padding: 2rem 0  4rem  0 ;
+  padding: 2rem 0 4rem 0;
 
   font-size: 2rem;
   border-radius: 0 0 1rem 1rem;
   box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.437);
-
 }
 .profile-content {
   padding: 0rem 3rem 3rem 3rem;
@@ -42,13 +43,15 @@ hr {
   display: flex;
   justify-content: space-between;
 }
-.profile-title_payment-text,.profile-logout{
+.profile-title_payment-text,
+.profile-logout {
   display: flex;
 }
-.profile-logout{
-  color: #CB1B1B;
+.profile-logout {
+  color: #cb1b1b;
 }
-.card-icon,.logout-icon{
+.card-icon,
+.logout-icon {
   margin-right: 1rem;
   width: 2rem;
 }

@@ -4,8 +4,6 @@ import Homepage from "./components/Homepage";
 import SignUp from "./components/SignUp";
 
 function App() {
-
-
   return (
     <div className="app">
       {/* <NewPassword /> */}

@@ -16,12 +16,15 @@ export const profileSlice = createSlice({
       state.displayProfile = !state.displayProfile;
     },
     displayedProfileEdit: (state) => {
-      state.displayEdit = !state.displayEdit;
+      state.displayEdit = true;
+    },
+    closedProfileEdit: (state) => {
+      state.displayEdit = false;
     },
   },
 });
 //increment and decrement are your action creators
 
-export const { toggleProfile, displayedProfileEdit } = profileSlice.actions;
+export const { toggleProfile, displayedProfileEdit,closedProfileEdit } = profileSlice.actions;
 
 export default profileSlice.reducer;

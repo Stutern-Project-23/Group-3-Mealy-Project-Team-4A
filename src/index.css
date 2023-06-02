@@ -45,14 +45,7 @@ form input{
   height: 3rem;
   border: 1px solid black;
 }
-button.button-large{
-  background-color:#6750A4 ;
-  width: 60%;
-  align-self:center;
-  color: white;
-  border-color: transparent;
-  padding: .5rem 0;
-}
+
 .logo-dark{
   width: 10rem;
   
