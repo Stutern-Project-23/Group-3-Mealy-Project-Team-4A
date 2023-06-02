@@ -2,11 +2,11 @@ import React from 'react';
 import {useState}from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import mealy from '../components/group_193.svg';
-import mail from '../components/mail.svg';
-import password from '../components/password.svg';
+import mealy from '../images/group_193.svg';
+import mail from '../images/mail.svg';
+import password from '../images/password.svg';
 // import eye from '../components/eye.svg';
-import google_logo from '../components/logos_google-icon.svg'
+import google_logo from '../images/logos_google-icon.svg'
 
 
 const LoginForm = () => {

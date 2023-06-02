@@ -1,0 +1,168 @@
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 50%; */
+    max-width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .modal h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 44px;
+    margin-block-start: 0%;
+  }
+  
+  .modal p {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .modal img {
+    max-width: 100%;
+    height: auto;
+  }
+  .login_img {
+    max-width: 100%;
+  }
+  .p_left {
+    text-align: end;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    width: 70%;
+  }
+  
+  .modal .error {
+    color: red;
+    font-size: 14px;
+  }
+  .close-button {
+    color: black;
+    background-color: #fff;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    font-size: 20px;
+  }
+  
+  .modal button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin-top: 10px;
+    background-color: #6750a4;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  #google_btn {
+    border: 1px solid rgb(1, 1, 1);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .google_icon {
+    position: absolute;
+    left: 27%;
+  }
+  @media only screen and (max-width: 768px) {
+    /* .modal {
+      width: 80%;
+      max-width: 500px;
+  
+    } */
+    .modal {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .modal h2 {
+      font-size: 30px;
+    }
+  
+    .modal p {
+      font-size: 16px;
+      padding: 0;
+    }
+  
+    .modal input {
+      width: 80%;
+    }
+  
+    .close-button {
+      font-size: 16px;
+    }
+    .login_img{
+      width: 400px;
+    
+    }
+  .img{
+    display: inline-flex;
+    justify-content: flex-start;
+  }
+  
+  .google_icon {
+    left: 10%;
+  }
+    
+  }
+  /* 
+  @media only screen and (max-width: 480px) {
+    .modal {
+      padding: 5px;
+  
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    .modal h2 {
+      font-size: 24px;
+    }
+  
+    .modal p {
+      font-size: 14px;
+    }
+  
+    .modal input {
+      width: 100%;
+      margin-top: 8px;
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .modal button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .close-button {
+      font-size: 14px;
+    }
+  } */
