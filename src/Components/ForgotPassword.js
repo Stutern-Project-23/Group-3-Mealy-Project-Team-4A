@@ -5,13 +5,13 @@ import CustomHeader from "./ForgotPasswordHeader";
 import '../styles/forgotpassword.css'
 export default function ForgotPassword() {
   return (
-    <div className="main-container">
+    <div className="forgot-password-main-container">
       <div className='header-container'>
       <div><CustomHeader heading="Forgot Password" /></div>
       </div>
 
       <div className="app-logo">
-    <img src ={logo} alt="forgot-email"/>
+        <img className ="app-logo-img"src ={logo} alt="forgot-email"/>
       </div>
 
       <div className="enter-email-text">
