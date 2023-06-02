@@ -29,15 +29,15 @@ const LoginForm = () => {
       <p>
         Don't have an account? <Link to="/signup">Sign up</Link>
       </p>
-      <img src={mealy} alt='mealy'/>
+      <img id='mealy' src={mealy} alt='mealy'/>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-        <img src={mail} alt='mail'/>
+        <img className='img' src={mail} alt='mail'/>
           <input type="text" placeholder='Email' {...register('email', { required: true })} />
           {errors.email && <span className="error">Email is required</span>}
         </div>
         <div>
-        <img src={password} alt='password'/>
+        <img className='img' src={password} alt='password'/>
           <input type="password" placeholder='Password' {...register('password', { required: true })} />
           {errors.password && <span className="error">Password is required</span>}
           {/* <img src={eye} alt='eye'/> */}

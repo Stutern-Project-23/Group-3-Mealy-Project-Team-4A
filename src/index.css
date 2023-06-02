@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .modal {
@@ -36,7 +36,7 @@ code {
   font-weight: 400;
   font-size: 20px;
 }
-.p_left{
+.p_left {
   text-align: end;
   padding: 0%;
 }
@@ -47,20 +47,18 @@ code {
 }
 
 .modal input {
-
   padding: 10px;
   border: none;
   outline: none;
   border-bottom: 1px solid #ccc;
   width: 70%;
-  
 }
 
 .modal .error {
   color: red;
   font-size: 14px;
 }
-.close-button{
+.close-button {
   color: black;
   background-color: #fff;
   width: 100%;
@@ -75,30 +73,90 @@ code {
   cursor: pointer;
 }
 
-.btn{
+.btn {
   margin-top: 10px;
-  background-color:#6750A4;
+  background-color: #6750a4;
   color: #fff;
   margin-bottom: 5px;
-
 }
-#google_btn{
-  border: 1px solid rgb(1, 1, 1) ;
+#google_btn {
+  border: 1px solid rgb(1, 1, 1);
   background-color: white;
   color: black;
   font-size: 16px;
   cursor: pointer;
   width: 100%;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   position: relative;
-;
- 
 }
-.google_icon{
+.google_icon {
   position: absolute;
-  left:27%;
+  left: 27%;
+}
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 80%;
+    max-width: 500px;
+
+  }
+
+  .modal h2 {
+    font-size: 30px;
+  }
+
+  .modal p {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .modal input {
+    width: 80%;
+  }
+
+  .close-button {
+    font-size: 16px;
+  }
+  #mealy{
+    width: 400px;
+  
+  }
+.img{
+  display: inline-flex;
+  justify-content: flex-start;
+}
+  
 }
 
+@media only screen and (max-width: 480px) {
+  .modal {
+    padding: 5px;
+    
+    width: 90%;
+    max-width: 300px;
+  }
 
+  .modal h2 {
+    font-size: 24px;
+  }
 
+  .modal p {
+    font-size: 14px;
+  }
+
+  .modal input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .modal button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .close-button {
+    font-size: 14px;
+  }
+}
