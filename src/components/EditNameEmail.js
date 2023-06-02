@@ -11,7 +11,7 @@ import editMailIcon from "../images/mail-icon.png";
 import clearEdit from "../images/clearEdit.svg";
 import close from "../images/close.svg";
 
-function EditProfileModal() {
+function EditNameEmailModal() {
   const { register, handleSubmit } = useForm();
   const { displayEdit } = useSelector((state) => state.profile);
   function editSubmit(data) {
@@ -78,4 +78,4 @@ function EditProfileModal() {
   );
 }
 
-export default EditProfileModal;
+export default EditNameEmailModal;

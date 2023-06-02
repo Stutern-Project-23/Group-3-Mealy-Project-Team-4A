@@ -1,3 +1,6 @@
+/* ........................EDIT PROFILE NAME AND EMAIL STYLES........................................ */
+
+
 .editProfile_input_container {
   position: relative;
 }
@@ -42,3 +45,4 @@
 .closeEditProfile-icon {
   align-self: flex-end;
 }
+/* ........................EDIT PROFILE PASSWORD STYLES........................................ */

@@ -35,9 +35,9 @@ function Profile() {
             <p className="profile-title">Password</p>
             <p className="profile-title_password">........</p>
           </div>
-          {/* <p className="edit" onClick={() => (setDisplayPasswordModal(true))}> */}
+          <p className="edit" onClick={showEdit}>
             Edit
-          {/* </p> */}
+          </p>
         </div>
         <hr></hr>
 
