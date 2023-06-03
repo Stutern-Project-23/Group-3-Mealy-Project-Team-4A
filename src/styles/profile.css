@@ -4,8 +4,9 @@
   max-width: 40rem;
   background-color: white;
   position: fixed;
-  overflow:scroll;
-  top: 10rem;
+  overflow: scroll;
+  display: block;
+  top: 8.5rem;
   right: 0;
   padding: 2rem 0 4rem 0;
 
@@ -33,6 +34,9 @@
   font-weight: bolder;
   font-size: 3rem;
 }
+.edit-text {
+  color: #381e72;
+}
 
 hr {
   width: 100%;
@@ -54,4 +58,9 @@ hr {
 .logout-icon {
   margin-right: 1rem;
   width: 2rem;
+}
+@media (max-width:992px){
+  .profile{
+    top: 12.5rem
+  }
 }

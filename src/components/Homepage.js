@@ -5,14 +5,16 @@ import { useSelector } from "react-redux";
 
 import React from "react";
 import HomepageNav from "./HomepageNav";
-import EditProfileName from "./EditProfileName";
+import EditNameEmailModal from "./EditNameEmail";
+import EditPasswordModal from "./EditPassword";
 function Homepage() {
   const { displayProfile } = useSelector((state) => state.profile);
   return (
     <div className="homepage-container">
       <HomepageNav />
       {displayProfile && <Profile />}
-      <EditProfileName />
+      <EditNameEmailModal />
+      <EditPasswordModal/>
       <p>
         HOMEPAGE CONTENT Հայերեն Shqip ‫العربية Български Català 中文简体
         Hrvatski Česky Dansk Nederlands English Eesti Filipino Suomi Français

@@ -3,31 +3,34 @@ import ReactModal from "react-modal";
 import "../styles/editProfile.css";
 import { useSelector, useDispatch } from "react-redux";
 import { closedProfileEdit } from "../redux/slices/profileSlice";
-import { editprofileNameModal } from "../styles/allModals";
+
 import { ButtonPill } from "./Buttons";
 import { useForm } from "react-hook-form";
 import editNameIcon from "../images/editname.svg";
 import editMailIcon from "../images/mail-icon.png";
 import clearEdit from "../images/clearEdit.svg";
 import close from "../images/close.svg";
+import * as profileConst from "../redux/constants/profile";
 
-function EditProfileModal() {
+function EditNameEmailModal() {
   const { register, handleSubmit } = useForm();
-  const { displayEdit } = useSelector((state) => state.profile);
+  const { displayNameEdit } = useSelector((state) => state.profile);
   function editSubmit(data) {
     console.log(data);
   }
   const dispatch = useDispatch();
   function closeProfileEdit() {
-    dispatch(closedProfileEdit());
+    dispatch(closedProfileEdit(profileConst.nameEdit));
   }
 
   return (
     <ReactModal
-      isOpen={displayEdit}
+      isOpen={displayNameEdit}
       contentLabel="editprofilemodal"
       onRequestClose={closeProfileEdit}
-      style={editprofileNameModal}
+      // style={editprofileNameModal}
+      overlayClassName="overlay"
+      className="overlay-content_edit"
     >
       <img
         src={close}
@@ -78,4 +81,4 @@ function EditProfileModal() {
   );
 }
 
-export default EditProfileModal;
+export default EditNameEmailModal;

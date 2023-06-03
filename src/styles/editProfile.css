@@ -1,3 +1,5 @@
+/* ........................EDIT PROFILE NAME AND EMAIL STYLES........................................ */
+
 .editProfile_input_container {
   position: relative;
 }
@@ -24,6 +26,19 @@
   font-size: 1.5rem;
   padding-left: 3.5rem;
 }
+
+.overlay-content_edit {
+  background-color: white;
+  max-width: 60rem;
+  width: 90%;
+  height: auto;
+  z-index: 4;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: transparent;
+}
 .icon-end,
 .icon-start {
   top: 50%;
@@ -42,3 +57,4 @@
 .closeEditProfile-icon {
   align-self: flex-end;
 }
+/* ........................EDIT PROFILE PASSWORD STYLES........................................ */

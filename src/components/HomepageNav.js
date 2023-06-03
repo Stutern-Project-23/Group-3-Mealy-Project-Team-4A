@@ -14,8 +14,13 @@ function HomepageNav() {
   }
   return (
     <nav className="homepage-nav">
-      <div className="nav-section_1 nav-section">
-        <img src={LogoDark} alt="mealy dark logo" className="logo-dark" />
+      <img
+        src={LogoDark}
+        alt="mealy dark logo"
+        className="logo-dark nav-logo"
+      />
+
+      <div className="address-input">
         <div className="address-container">
           <img
             src={Location}
@@ -29,17 +34,18 @@ function HomepageNav() {
             className="nav-section_arrow-icon"
           />
         </div>
-      </div>
-      <div className="nav-section_2 nav-section">
         <input className="homepage-nav_search" placeholder="search"></input>
-        <img src={Cart} alt="cart icon" className="nav-section_cart-icon" />
-        <img
-          src={Profile}
-          alt="profile icon"
-          className="nav-section_profile-icon"
-          onClick={toggle}
-        />
-      </div>
+        </div>
+        <div className="cart-profile ">
+          <img src={Cart} alt="cart icon" className="nav-section_cart-icon" />
+          <img
+            src={Profile}
+            alt="profile icon"
+            className="nav-section_profile-icon"
+            onClick={toggle}
+          />
+        </div>
+
     </nav>
   );
 }
