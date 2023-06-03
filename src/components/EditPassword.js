@@ -3,31 +3,31 @@ import ReactModal from "react-modal";
 import "../styles/editProfile.css";
 import { useSelector, useDispatch } from "react-redux";
 import { closedProfileEdit } from "../redux/slices/profileSlice";
-import { editprofileNameModal } from "../styles/allModals";
+
 import { ButtonPill } from "./Buttons";
 import { useForm } from "react-hook-form";
-import editNameIcon from "../images/editname.svg";
-import editMailIcon from "../images/mail-icon.png";
-import clearEdit from "../images/clearEdit.svg";
 import close from "../images/close.svg";
+import padlockIcon from "../images/padlock.svg";
+import * as profileConst from "../redux/constants/profile.js";
 
 function EditPasswordModal() {
   const { register, handleSubmit } = useForm();
-  const { displayEdit } = useSelector((state) => state.profile);
+  const { displayPasswordEdit } = useSelector((state) => state.profile);
   function editSubmit(data) {
     console.log(data);
   }
   const dispatch = useDispatch();
   function closeProfileEdit() {
-    dispatch(closedProfileEdit());
+    dispatch(closedProfileEdit(profileConst.passwordEdit));
   }
 
   return (
     <ReactModal
-      isOpen={displayEdit}
+      isOpen={displayPasswordEdit}
       contentLabel="editprofilemodal"
       onRequestClose={closeProfileEdit}
-      style={editprofileNameModal}
+      overlayClassName="overlay"
+      className="overlay-content_edit"
     >
       <img
         src={close}
@@ -37,39 +37,41 @@ function EditPasswordModal() {
       />
       <h2 className="editProfile_heading">Password</h2>
       <form className="editProfile_form" onSubmit={handleSubmit(editSubmit)}>
-        <label htmlFor="edit-name" className="editProfile_title">
-          Name
-        </label>
         <div className="editProfile_input_container">
           <input
             type="text"
             className="editProfile_input"
             placeholder="Old password"
-            id="edit-name"
+            id="old-password"
             {...register("old-pwd", { required: "this is required" })}
           />
-          <img src={editNameIcon} alt="edit name icon" className="icon-start" />
-          <img src={clearEdit} alt="clear edit icon" className="icon-end" />
+          <img src={padlockIcon} alt="padlock  icon" className="icon-start" />
         </div>
-        <label htmlFor="edit-email" className="editProfile_title">
-          Email
-        </label>
+
         <div className="editProfile_input_container">
           <input
             type="text"
             className="editProfile_input"
-            id="edit-email"
-            placeholder="marmtee@gmail.com"
-            {...register("edit-email", {
+            id="new-password"
+            placeholder="Password"
+            {...register("new-password", {
               required: "this is required",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "invalid Email Address",
-              },
             })}
           />
-          <img src={editMailIcon} alt="edit name icon" className="icon-start" />
-          <img src={clearEdit} alt="clear edit icon" className="icon-end" />
+          <img src={padlockIcon} alt="padlock  icon" className="icon-start" />
+        </div>
+
+        <div className="editProfile_input_container">
+          <input
+            type="text"
+            className="editProfile_input"
+            id="reEnter-password"
+            placeholder="Re-enter password"
+            {...register("new-password", {
+              required: "this is required",
+            })}
+          />
+          <img src={padlockIcon} alt="padlock  icon" className="icon-start" />
         </div>
 
         <ButtonPill text="Submit" className="button-pill_editProfileName" />

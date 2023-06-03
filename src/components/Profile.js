@@ -6,12 +6,17 @@ import Logout from "../images/logout.svg";
 import { AiOutlineRight } from "react-icons/ai";
 import {useDispatch } from "react-redux";
 import { displayedProfileEdit } from "../redux/slices/profileSlice";
+import * as profileConst from "../redux/constants/profile" 
+
 
 function Profile() {
  
  const dispatch=useDispatch();
- function showEdit(){
-  dispatch(displayedProfileEdit())
+ function showNameEdit(){
+  dispatch(displayedProfileEdit(profileConst.nameEdit))
+ }
+ function showPasswordEdit(){
+  dispatch(displayedProfileEdit(profileConst.passwordEdit))
  }
   return ReactDOM.createPortal(
     <section className="profile">
@@ -25,7 +30,7 @@ function Profile() {
             <p className="profile-title">Email</p>
             <p className="profile-title_text">Marmtee@gmail.com</p>
           </div>
-          <p className="edit" onClick={showEdit}>
+          <p className="edit-text" onClick={showNameEdit}>
             Edit
           </p>
         </div>
@@ -35,7 +40,7 @@ function Profile() {
             <p className="profile-title">Password</p>
             <p className="profile-title_password">........</p>
           </div>
-          <p className="edit" onClick={showEdit}>
+          <p className="edit-text" onClick={showPasswordEdit}>
             Edit
           </p>
         </div>
