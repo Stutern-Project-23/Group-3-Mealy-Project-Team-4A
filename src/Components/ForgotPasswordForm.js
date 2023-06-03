@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import ButtonLarge from "./Buttons";
 
 export default function ForgotPasswordForm() {
   const validationSchema = Yup.object().shape({
@@ -29,9 +30,7 @@ export default function ForgotPasswordForm() {
         <p className="invalid-feedback">{errors.email?.message}</p>
       </div>
 
-      <button className="forgot-password_btn" type="submit">
-        SEND
-      </button>
+     <ButtonLarge text="SEND"/>
     </form>
   );
 }
