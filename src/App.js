@@ -3,6 +3,8 @@ import NewPassword from "./components/NewPassword";
 import Homepage from "./components/Homepage";
 import SignUp from "./components/SignUp";
 import ForgotPassword from "./components/ForgotPassword";
+import Activation from "./components/Activation";
+import "./styles/activation.css";
 
 function App() {
   return (
@@ -10,8 +12,8 @@ function App() {
       {/* <NewPassword /> */}
       {/* <SignUp/> */}
       {/* <Homepage /> */}
-      <ForgotPassword/>
-  
+      {/* <ForgotPassword/> */}
+      <Activation />
       {/* <p>{value}</p>
       <button onClick={incrementValue}>increment</button> */}
   
