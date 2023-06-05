@@ -13,7 +13,7 @@ function App() {
       {/* <SignUp/> */}
       {/* <Homepage /> */}
       {/* <ForgotPassword/> */}
-      <Activation />
+      {/* <Activation /> */}
       {/* <p>{value}</p>
       <button onClick={incrementValue}>increment</button> */}
   

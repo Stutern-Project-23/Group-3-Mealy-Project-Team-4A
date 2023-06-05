@@ -14,8 +14,8 @@ function NewPassword() {
 
   console.log(errors);
   return (
-    <div className="newpassword-container">
-      <h2>Create New Password</h2>
+    <div className="newpassword-container auth-padding auth-width">
+      <h2 className="auth-title">Create New Password</h2>
       <img src={Privacy} alt="encryption illustration" />
       <p>
         Your password should contain{" "}
