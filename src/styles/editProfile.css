@@ -1,0 +1,60 @@
+/* ........................EDIT PROFILE NAME AND EMAIL STYLES........................................ */
+
+.editProfile_input_container {
+  position: relative;
+}
+.editProfile_input {
+  color: #695f69;
+  border: none;
+  border-bottom: 1px solid #1d1b20;
+  margin-bottom: 2rem;
+  padding-left: 3.5rem;
+
+  width: 100%;
+}
+.editProfile_input:focus {
+  outline: none;
+}
+.editProfile_input[type="text"]::placeholder {
+  color: #695f69;
+}
+.editProfile_heading {
+  font-weight: 600;
+}
+.editProfile_title {
+  color: black;
+  font-size: 1.5rem;
+  padding-left: 3.5rem;
+}
+
+.overlay-content_edit {
+  background-color: white;
+  max-width: 60rem;
+  width: 90%;
+  height: auto;
+  z-index: 4;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: transparent;
+}
+.icon-end,
+.icon-start {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 2rem;
+}
+.icon-start {
+  left: 0.5rem;
+  padding-bottom: 2rem;
+}
+.icon-end {
+  right: 0.5rem;
+  padding-bottom: 2.5rem;
+}
+.closeEditProfile-icon {
+  align-self: flex-end;
+}
+/* ........................EDIT PROFILE PASSWORD STYLES........................................ */

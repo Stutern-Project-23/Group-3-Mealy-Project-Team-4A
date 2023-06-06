@@ -10,26 +10,37 @@
 - ***git push*** your branch **git push --set-upstream origin YourBranch**
 - Make a pull request to the dev branch
 
+## Working on your next task
+
+Dear develper,changes have been made to the dev branch because your team mates's code have been merged to it. You need to have the changes on your local machine to work with the latest changes,hence you have to **PULL** changes from the **dev branch** before starting your new task .
+
+Pulling from the dev branch **before** starting your next task helps identify code conflicts and
+you can resolve the conflicts before starting your new task
+
+### pulling changes from the dev branch
+
+- git checkout dev
+- git pull origin dev
+- git checkout YourBranch
+- git merge dev
+- resolve code conflicts if present
+
+
+
+
 ## Working with the styles folder
 
-- In the **styles** folder,create a folder and name it 
-
-- In your named folder,start creating your needed css files
+- In the **styles** folder,create your css file with the same name as your component
 
 **The folder structure is below**
 
 ```
 - styles
-    - teamMemberName-styles
+  
         - Header.css
         - Button.css
 
-E.g
-- styles
-    -pamela-styles
-        - Header.css
-        - Button.css
-         
+
 ```
 
 ## Testing using React-Testing-Library and Jest

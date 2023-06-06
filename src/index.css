@@ -1,65 +1,84 @@
-body{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+html {
   font-size: 62.5%;
 }
-
-
-/* 
-html{
-  font-size: 62.5%;
-}
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 62.5%;
 }
-h2{
-  font-weight: 500;
+h2 {
+  font-weight: 600;
   font-size: 3rem;
 }
-form{
+h2.auth-title {
+  text-align: center;
+}
+form {
   margin-top: 3rem;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
-form .form-group{
-margin-bottom: 2rem;
-display: flex;
-flex-direction: column; 
-width: 100%;
-font-size: 1.2rem;
-font-weight: 500;
-
+.auth-padding {
+  padding: 2rem 2.5rem;
 }
-form .form-group .error-message{
+.auth-width {
+  max-width: 80rem;
+  width: 90%;
+}
+form .form-group {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+form .form-group .error-message {
   align-self: flex-start;
   color: red;
   margin-top: 1rem;
 }
-form input{
-  margin-top: .5rem;
+form input {
+  margin-top: 0.5rem;
   padding-left: 2rem;
   height: 3rem;
   border: 1px solid black;
 }
-button.button-large{
-  background-color:#6750A4 ;
-  width: 60%;
-  align-self:center;
-  color: white;
-  border-color: transparent;
-  padding: .5rem 0;
+.overlay {
+  background-color: #6650a495;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media (max-width:465px){
-  html{
+.logo-dark {
+  width: 10rem;
+}
+
+@media (max-width: 465px) {
+  html {
     font-size: 50%;
   }
-} */
+  .logo-dark {
+    width: 7rem;
+  }
+}
+@media (max-width: 375px) {
+  h2.auth-title {
+    font-size: 2.5rem;
+  }
+}
