@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/buttons.css";
-import { getByText } from "@testing-library/react";
+//import { getByText } from "@testing-library/react";
 
 function ButtonLarge({ text }) {
   return (

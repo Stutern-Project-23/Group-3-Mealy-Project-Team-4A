@@ -1,0 +1,103 @@
+.track-order-heading{
+    display:flex;
+    flex-direction:right;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.track-order-back{
+    height:15px;
+    width:15px;
+}
+
+.track-order-chat{
+    height:18px;
+    width:18px;
+}
+
+.rating-star{
+    height:12px;
+    width:12px;
+}
+
+.track-order-main-container{
+    border: 1px solid black;
+    padding-bottom: 50px;
+}
+
+.your-rider-container,.your-rider-right-side,.rider-rating,.your-rider-left-side{
+    display: flex;
+}
+.your-rider-container{
+flex-direction:row;
+justify-content: space-between;
+padding: 10px;
+}
+.delivery-time-div{
+   border-bottom: 1px solid #67646A;
+   padding: 10px;
+}
+
+.track-time-header{
+font-size: 10px;
+font-weight:bold;
+line-height: 27px;
+text-align: center;
+font-style: bold;
+
+}
+
+.track-time{
+font-size: 13px;
+font-weight:bold;
+line-height: 27px;
+text-align: center;
+margin-top: -9px;
+font-style: bold;
+color:#381E72; 
+font-weight:700
+}
+
+.your-rider-left-side img{
+width:70px;
+height:70px;
+}
+
+.your-rider-left-side{
+   gap: 8px;
+}
+
+.rider-details{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.your-rider-title{
+    font-size: 13px;
+}
+
+.rider-name{
+    font-size:10px;
+    font-weight:bold;
+    margin-top: 5px;
+}
+
+.rider-rating{
+    gap: 5px;
+}
+
+.your-rider-right-side{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.track-order-progress-bar{
+    background-color: #F5F5F5;
+    padding: 30px;
+   
+}

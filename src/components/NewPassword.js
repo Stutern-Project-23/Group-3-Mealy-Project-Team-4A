@@ -3,7 +3,7 @@ import "../styles/newpassword.css";
 
 import Privacy from "../images/privacy.svg";
 import { useForm } from "react-hook-form";
-import ButtonLarge from "./Buttons";
+import ButtonLarge from "../Components/Buttons";
 
 function NewPassword() {
   const {
