@@ -1,7 +1,6 @@
 .track-order-heading{
     display:flex;
     flex-direction:right;
-    justify-content: space-around;
     align-items: center;
     gap: 20px;
     padding-left: 20px;
