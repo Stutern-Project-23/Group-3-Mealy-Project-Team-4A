@@ -53,9 +53,7 @@ export default function ForgotPasswordForm() {
         <p className="invalid-feedback">{errors.email?.message}</p>
       </div>
 
-      {!isSubmitting && !submitSuccess && !submitError && (
-        <ButtonLarge type="submit" text="SEND" />
-      )}
+      {!isSubmitting &&<ButtonLarge type="submit" text="SEND" />}
 
       {isSubmitting && <p className="feedback submit-feedback">Sending...</p>}
 
