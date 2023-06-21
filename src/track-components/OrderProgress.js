@@ -1,68 +1,81 @@
-import * as React from 'react';
-import { Stepper, Step, StepLabel } from "@material-ui/core";
-import { styled } from '@mui/system';
+import React, { useEffect } from 'react';
+
 export default function OrderProgress() {
+  useEffect(() => {
+    const first = document.querySelector('.first');
+    const second = document.querySelector('.second');
+    const third = document.querySelector('.third');
+    const fourth = document.querySelector('.fourth');
+    const fifth = document.querySelector('.fifth');
+    const steps = [first, second, third, fourth, fifth];
 
+    function nextStep(currentStep) {
+      steps.forEach(step => step.classList.remove('finished'));
 
-  const StyledStepper = styled(Stepper)({
-    boxShadow: 2,
-    backgroundColor: "rgb(245,245,245)",
-    padding:2,
+      steps.forEach((step, index) => {
+        if (index <= currentStep) {
+          step.classList.add('finished');
+        } else {
+          step.classList.remove('finished');
+        }
+      });
+    }
 
-    '& .MuiStepIcon-active': {
-      color: 'purple',
-    },
-    '& .MuiStepIcon-completed': {
-      color: 'grey',
-    },
-    '& .Mui-disabled .MuiStepIcon-root': {
-      color: 'warning.main',
-    },
+    steps.forEach((step, index) => {
+      step.addEventListener('click', () => {
+        nextStep(index);
+      });
+    });
 
-    '& .MuiStepConnector-root': {
-      display: 'flex',
-      flexDirection: 'column',
-      
-      padding: 0,
-    },
-    '& .MuiStepConnector-line': {
-      width: '2px', // Adjust the width of the connector line
-      backgroundColor: '#F5F5F5', // Adjust the color of the connector line
-      marginLeft:'-5px',
-    },
-  });
-
-
-  const StyledStepLabel = styled(StepLabel)(({ theme }) => ({
-    '& .MuiStepLabel-label': {
-      fontSize: '10px',
-      fontWeight: 'bold',
-      paddingLeft:'35px'
-    },
-  }));
-
-
-
+    // Cleanup event listeners when component unmounts
+    return () => {
+      steps.forEach((step, index) => {
+        step.removeEventListener('click', () => {
+          nextStep(index);
+        });
+      });
+    };
+  }, []); 
 
   return (
- <div className='track-order-progress-bar'>
-    <StyledStepper activeStep={4} orientation="vertical" >
-        <Step>
-          <StyledStepLabel  >Order Confirmed</StyledStepLabel>
-        </Step>
-        <Step>
-          <StyledStepLabel >Preparing Your Order</StyledStepLabel>
-        </Step>
-        <Step>
-          <StyledStepLabel >Order is ready at the restaurant</StyledStepLabel>
-        </Step>
-        <Step>
-          <StyledStepLabel >Rider is picking up your order</StyledStepLabel>
-        </Step>
-        <Step>
-          <StyledStepLabel >Rider is nearby your place</StyledStepLabel>
-        </Step>
-      </StyledStepper>
-    </div>  
+    <div>
+      <div className='track-order-progress-bar'>
+        <ul>
+          <li>
+            <div className="step first">
+              <i className="awesome fa-solid fa-check"></i>
+            </div>
+            <p className="label">Order Confirmed</p>
+          </li>
+          <li>
+            <div className="step second">
+              <i className="awesome fa-solid fa-check"></i>
+            </div>
+            <p className="label">Preparing Your Order</p>
+          </li>
+
+          <li>
+            <div className="step third">
+              <i className="awesome fa-solid fa-check"></i>
+            </div>
+            <p className="label">Order is ready at the restaurant</p>
+          </li>
+
+          <li>
+            <div className="step fourth">
+              <i className="awesome fa-solid fa-check"></i>
+            </div>
+            <p className="label">Rider is picking up the order</p>
+          </li>
+          <li>
+            <div className="step fifth">
+              <i className="awesome fa-solid fa-check"></i>
+            </div>
+            <p className="label">Rider is nearby your place</p>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
+

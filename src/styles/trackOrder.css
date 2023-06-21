@@ -97,6 +97,66 @@ justify-content: center;
 
 .track-order-progress-bar{
     background-color: #F5F5F5;
-    padding: 30px;
+    padding:20px;
    
-}
+} 
+
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:40px;
+    margin: 10px 0;
+  }
+  
+  ul li .icons {
+    font-size: 25px;
+  }
+  
+  ul li .label {
+    font-size: 13px;
+    font-weight:600;
+  }
+  
+  ul li .step {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color:#6750a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ghostwhite;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  ul li .step::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #d7d7c3;
+    top: 19px;
+  }
+  
+  ul li .step p {
+    font-size: 18px;
+  }
+  
+  ul li .finished {
+    background-color:#A6A6A6;
+  }
+  
+  ul li .finished::after {
+    background-color:#A6A6A6;
+  }
+  
+  
+  
