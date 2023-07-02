@@ -1,0 +1,54 @@
+.logout-section{
+    background-color: white;
+    width: 50rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 4rem 1rem 4rem;
+}
+.overlay_logout{
+    background-color: rgba(0, 0, 0, 0.587);
+}
+.logout-section img{
+width: 10rem;
+
+}
+.logout-confirm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    
+}
+.logout-btn{
+  border-radius: 3rem;
+  height: 5rem;
+  border: 2px solid #6750A4;
+  margin-bottom: 1.5rem;
+  width: 80%;
+  font-weight: 500;
+  text-align: center;
+  
+}
+.logout-btn_no{
+    color: white;
+}
+.logout-btn_yes{
+    color: #6750A4;
+    transition: all ease-in .2s;
+    background-color: white;
+}
+
+
+.logout-btn_yes:hover{
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.614);
+}
+@media(max-width:375px){
+    .logout-confirm{
+        font-size: 2rem;
+    }
+}

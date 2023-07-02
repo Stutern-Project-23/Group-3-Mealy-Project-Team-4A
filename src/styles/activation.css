@@ -1,0 +1,68 @@
+.activation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.activation-img {
+    width: 50%;
+    height: auto;
+}
+
+.activation-email-notify {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+form.activation-code-box-container {
+  width: 70%;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+ input.code-box {
+
+  background-color: #e0e0e0;
+  width: 6rem;
+  height: 5rem;
+  border-color:transparent ;
+  
+
+}
+input.code-box::placeholder{
+  font-weight: bolder;
+  font-size: 2rem;
+  color: black;
+} 
+
+.receive-code {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.receive-code span {
+    color: #6750a4;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+
+@media (max-width: 425px) {
+  .activation-img {
+    width: 90%;
+  }
+  .activation-code-box-container{
+    width: 100%;
+  }
+}
+@media(max-width:320px){
+  .verify-proceed-btn{
+    font-size: 1.5rem;
+  }
+}

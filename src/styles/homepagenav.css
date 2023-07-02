@@ -1,0 +1,125 @@
+.homepage-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  font-size: 1.3rem;
+  background-color: white;
+  z-index: 6;
+}
+
+.logo-dark {
+  float: left;
+  margin-right: 2rem;
+}
+.cart-profile {
+  float: right;
+  display: flex;
+}
+.address-input {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+
+}
+.address-container {
+  display: flex;
+  align-items: center;
+}
+.homepage-nav_search {
+  text-align: center;
+  background-color: #ebebeb;
+  background-image: url(../images/magnifier.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 34%;
+  padding: 0.5em 0;
+  font-size: 2rem;
+  border-color: transparent;
+  flex-basis: 30%;
+}
+.nav-section_arrow-icon,
+.nav-section_location-icon {
+  width: 1rem;
+}
+.nav-section_profile-icon,
+.nav-section_filter-icon {
+  width: 2.5rem;
+  margin-left: 2rem;
+}
+
+.auth-profile-icon {
+height: 3rem;
+} 
+
+.address {
+  margin: 0 1rem;
+}
+.login-tip{
+  position: absolute;
+  background-color: white;
+  padding: 1em;
+  top: 10rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+  border-radius: 1rem;
+  border: 2px solid #6750A4;
+
+}
+.login-tip p{
+  font-weight: bold;
+font-size: 2rem;
+}
+@media (max-width: 992px) {
+  .homepage-nav {
+    align-items: flex-start;
+  }
+  .address-input {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage-nav_search {
+   width: 60%;
+    order: -1;
+    margin-bottom: 1.5rem;
+    background-position: 35%;
+  }
+  .logo-dark,
+  .nav-section_filter-icon,
+  .nav-section_profile-icon {
+    margin-top: 1rem;
+  }
+  .unAuthprofile-icon{
+    margin-top: .5rem;
+  }
+}
+@media (max-width: 625px) {
+  .homepage-nav_search{
+    background-position: 25%;
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .address-input {
+    font-size: 1.5rem;
+  }
+  
+  .login-tip{
+    width: 16rem;
+    top: 12rem;
+  }
+  .login-tip p{
+    font-size: 1.5rem;
+    
+  }
+  .login-tip img{
+    width: 3rem;
+  }
+}

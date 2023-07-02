@@ -1,0 +1,89 @@
+.overlay-a {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  height: 40rem;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.chat-window.open {
+  transform: translateX(0);
+}
+
+.chat-header {
+  background-color: #6750a4;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+.chat-header h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.chat-header p,
+.message {
+  font-size: 1.2rem;
+}
+.chat-body {
+  padding: 1rem;
+}
+.chat-form {
+  border-top: 1px solid #c7c7c7;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+.chat-form input {
+  border: 0;
+  padding-left: 0 !important;
+}
+.chat-form input:focus {
+  outline: 0;
+}
+.chat-form button,
+.chat-toggle {
+  background-color: transparent !important;
+}
+.chat-form img {
+  width: 1.5rem;
+}
+.chat-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 0 !important;
+}
+.close-message{
+  z-index: 6;
+
+}
+.menu-card{
+    position: relative;
+}
+.chat-toggle img {
+  width:5rem;
+}
+.live-chat{
+    position: fixed;
+    right: 20px;
+    bottom: 5px;
+}

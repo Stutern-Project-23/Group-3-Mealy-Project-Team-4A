@@ -1,0 +1,80 @@
+/* ....................................MEAL CATEGORY....................... */
+
+.categories-section_meal {
+  margin: 2rem 0 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: auto;
+  height: auto;
+  gap: 1rem 4rem;
+}
+.category-meal-container {
+  width: 100%;
+  text-align: center;
+}
+.category-meal-container img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.category-meal_name {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+/* ....................................ORDER CATEGORY....................... */
+.categories-section_order {
+  margin-top: 3rem;
+}
+.order-types {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 2rem 0;
+}
+
+.order-type {
+  font-size: 2rem;
+  color: black;
+
+  font-weight: 500;
+  border-radius: 4rem;
+  margin-right: 2rem;
+  padding: 1em 0;
+  transition: all ease-in 0.2s;
+}
+.order-type.active {
+  background-color: #6750a4;
+  color: white;
+  padding: 0.8em 1.5em;
+}
+.order-category {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: black;
+}
+.order-category_restaurant-cards {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem 2rem;
+}
+@media (max-width: 992px) {
+  .category-meal_name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 345px) {
+  .order-types {
+    width: 100%;
+  }
+  .order-type {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  .order-types {
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,37 @@
+.checkout-container{
+    position: relative;
+    margin-top: 8rem;
+   
+}
+
+.checkout-nav{
+    height: 5rem;
+    background-color: red;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.checkout-content{
+    padding: 0 8rem;
+}
+.back{
+    margin-right: 1rem;
+    width: 1.5rem;
+}
+.back-container{
+    display: flex;
+    align-items: center;
+}
+.back-container p{
+    font-size: 2rem;
+font-weight: bold;
+}
+.orders-details-container{
+background-color: pink;
+display: flex;
+justify-content: space-between;
+}
+.order{
+    font-size: 2rem;
+}
