@@ -22,8 +22,9 @@ function NewPassword() {
     dispatch(closedAuthModal(auth.CreateNewPwd));
   }
   return (
-    <ReactModal
-      isOpen={true}
+    <ReactModal    
+     // isOpen={true}eactModal
+ 
       className="newpassword-container auth-padding auth-width"
       overlayClassName="overlay"
       onRequestClose={closeCreateNewPwd}

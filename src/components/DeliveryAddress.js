@@ -1,38 +1,41 @@
 import React, { useEffect, useState } from "react";
-import map from "../images/Map.jpg";
-import "../styles/mapAddress.css"
+import "../styles/mapAddress.css";
 import RoundLocation from "../images/locationround.svg";
 import ReactModal from "react-modal";
-import { useDispatch, useSelector } from "react-redux";
-import { authedHomepage, closedAuthModal, toggled } from "../redux/slices/authSlice";
+import { useDispatch} from "react-redux";
+import {
+  authedHomepage,
+  closedAuthModal,
+  toggled,
+} from "../redux/slices/authSlice";
 import { useLocation, useNavigate } from "react-router-dom";
+import Map from "./Map"
 
 const DeliveryAddress = () => {
-  const { displayDeliveryMap } = useSelector((state) => state.auth);
-  const [setAddress,setSetAddress]=useState(false)
-  const dispatch=useDispatch();
-  const navigate=useNavigate()
-  const location=useLocation()
+  const [setAddress, setSetAddress] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  function closeMapModal(){
-    dispatch(closedAuthModal('map'))
-    setSetAddress(true)
-    dispatch(authedHomepage('auth'))
-    dispatch(toggled('loginTip'))
-    console.log(setAddress)
-    console.log(location.pathname)
+  function closeMapModal() {
+    dispatch(closedAuthModal("map"));
+    setSetAddress(false);
+    dispatch(authedHomepage("auth"));
+    dispatch(toggled("loginTip"));
+    console.log(setAddress);
+    console.log(location.pathname);
   }
-  useEffect(()=>{
-  
-    if(setAddress&&location.pathname==='/'){
-     navigate("/home/deliveryOrder")
- 
+
+  useEffect(() => {
+    if (setAddress && location.pathname === "/") {
+      navigate("/home/deliveryOrder");
     }
-    
-  },[setAddress,navigate,location.pathname])
+  }, [setAddress, navigate, location.pathname]);
+
   return (
     <ReactModal
-      isOpen={displayDeliveryMap}
+      // isOpen={displayDeliveryMap}
+      isOpen={true}
       overlayClassName="overlay"
       className="delivery-address auth-width"
       onRequestClose={closeMapModal}
@@ -57,9 +60,16 @@ const DeliveryAddress = () => {
       </div>
 
       <div className="map-section">
-        <img src={map}  alt="map" />
+        <Map />
       </div>
     </ReactModal>
   );
 };
+
 export default DeliveryAddress;
+
+
+
+
+
+
