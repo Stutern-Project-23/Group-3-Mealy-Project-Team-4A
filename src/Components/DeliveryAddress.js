@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/mapAddress.css";
 import RoundLocation from "../images/locationround.svg";
 import ReactModal from "react-modal";
-import { useDispatch} from "react-redux";
+import { useDispatch } from 'react-redux';
 import {
   authedHomepage,
   closedAuthModal,
