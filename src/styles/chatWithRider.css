@@ -1,0 +1,61 @@
+.chat-with-rider-header-container {
+  display: flex;
+  flex-direction: right;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+}
+
+.rider-header-image-and-name {
+  display: flex;
+  flex-direction: right;
+  align-items: center;
+}
+
+.chat-with-rider-image img {
+  width: 60.89px;
+  height: 60.89px;
+}
+
+.chat-with-rider-back {
+  height: 23px;
+  width: 23px;
+}
+
+.chat-with-rider-call {
+  height: 15px;
+  width: 15px;
+}
+
+.rider-details {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.chat-with-rider-main-container {
+  border: 1px solid black;
+  padding: 20px;
+  height: auto;
+}
+
+/* .chat-with-rider-call-div{
+
+} */
+
+.chat-with-rider-message-input input {
+  margin-top:90%;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius:8px;
+  background-image: url("../images/send-arrow.png");
+  background-repeat: no-repeat;
+  padding-left:2rem;
+  background-position: 95%;
+  background-size: 20px 20px;
+  border: 1px #6750A4 solid;
+}

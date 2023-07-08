@@ -1,13 +1,15 @@
-.App {
-  background-color: #6750A4;
-  display: grid;
-  flex-direction: column;
-  justify-items: center;
-  padding: 288px 102px 288px 102px;
-  margin: 0px;
+.app {
+  min-height: 100vh;
+  max-width: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1;
 }
 
-.main-container {
+/* .main-container {
+.forgot-password-main-container {
   display: grid;
   flex-direction: column;
   justify-items: center;
@@ -16,63 +18,5 @@
   left: 288px;
   margin: auto;
   background-color: white;
-}
-
-
-.email-input {
-  width: 43.75em;
-  padding: 10px, 24px, 10px, 24px;
-  height: 40px;
-}
-
-.primary-button {
-  width: 31.25em;
-  height: 40px;
-  background-color: #6750A4;
-  color: white;
-}
-
-.form-component {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 72px;
-
-  width: 700px;
-  height: 152px;
-
-}
-
-.close-icon {
-  position: absolute;
-  top: 310px;
-  left: 74%;
-  Width: 16px;
-  Height: 16px;
-}
-
-
-
-.enter-email-placeholder {
-  width: 243px;
-  height: 56px;
-}
-
-.mail-icon {
-  Width: 16px;
-  Height: 16px;
-}
-
-.enter-email-1 {
-  display: flex;
-  flex-direction: right;
-  position: absolute;
-  gap: 6px;
-  top: 935px;
-  left: 320px;
-}
-
-.enter-email-1 span {
-  opacity: 0.38;
-}
+  border: 1px solid black;
+} */

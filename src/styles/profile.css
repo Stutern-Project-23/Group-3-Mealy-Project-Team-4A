@@ -1,0 +1,66 @@
+.profile {
+  height: 90vh;
+  width: 100%;
+  max-width: 40rem;
+  background-color: white;
+  position: fixed;
+  overflow: scroll;
+  display: block;
+  top: 8.5rem;
+  right: 0;
+  padding: 2rem 0 4rem 0;
+
+  font-size: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.437);
+}
+.profile-content {
+  padding: 0rem 3rem 3rem 3rem;
+}
+.profile h2 {
+  margin-left: 3rem;
+}
+.profile-title {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.profile-title_text {
+  margin-top: 2rem;
+}
+.profile-title_name {
+  margin-bottom: 2rem;
+}
+.profile-title_password {
+  font-weight: bolder;
+  font-size: 3rem;
+}
+.edit-text {
+  color: #381e72;
+}
+
+hr {
+  width: 100%;
+  border: 0.1px solid #5551512c;
+  margin: 2rem 0 2rem 0;
+}
+.profile-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-title_payment-text,
+.profile-logout {
+  display: flex;
+}
+.profile-logout {
+  color: #cb1b1b;
+}
+.card-icon,
+.logout-icon {
+  margin-right: 1rem;
+  width: 2rem;
+}
+@media (max-width:992px){
+  .profile{
+    top: 12.5rem
+  }
+}
