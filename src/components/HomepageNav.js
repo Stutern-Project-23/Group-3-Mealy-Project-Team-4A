@@ -21,9 +21,6 @@ function HomepageNav() {
   const {authUser}=useSelector((state)=>state.auth)
   const {userAddress}=useSelector((state)=>state.userData)
 
-  console.log(authUser)
- 
- 
 
   function displayProfile() {
   dispatch(Profile('showProfile'));

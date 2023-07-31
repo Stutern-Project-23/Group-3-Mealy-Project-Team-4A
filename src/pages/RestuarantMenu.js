@@ -78,8 +78,6 @@ const Tab = () => {
   const openCartModal = (menu) => {
     dispatch(setSelectedMenuItem(menu));
     dispatch(displayedCartModal("openCartModal"));
-    console.log("Clicked");
-    console.log(menu);
     // dispatch(displayedChatModal("openChatModal"));
   };
   const handleDecrease = () => {

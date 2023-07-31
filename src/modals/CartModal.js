@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/cartmodal.css";
 import CartPageImage from "../images/cart-page-image.png";
 import CloseWindowIcon from "../images/close-window.svg";
@@ -36,10 +36,6 @@ const CartModal = () => {
     dispatch(displayedCartModal("closeCartModal"));
     dispatch(zeroQuantity());
   };
-
-  useEffect(() => {
-    console.log(selectedMenuItem);
-  }, [selectedMenuItem]);
 
   return (
     <>

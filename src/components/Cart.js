@@ -16,8 +16,6 @@ const Cart = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const dispatch = useDispatch();
   const {items} = useSelector((state) => state.newCart);
- 
-  console.log(items)
 
   const handleRemoveFromCart = (itemId) => {
     dispatch(removeFromCart(itemId));
