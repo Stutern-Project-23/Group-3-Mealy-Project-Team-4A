@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import {useForm}  from "react-hook-form";
 
 import Biker from "../images/bike.png";
@@ -62,10 +62,6 @@ const onSignupSubmit = async (data) => {
     dispatch(toggled('signup'));
     dispatch(displayedAuthModal("login"));
   }
-  const {user}=useSelector((state)=>state.userData)
-  useEffect(()=>{
-  console.log(user)
-    },[user])
 
 const { displaySignUpModal } = useSelector((state) => state.auth);
   return (

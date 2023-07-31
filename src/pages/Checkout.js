@@ -21,7 +21,10 @@ import { Order } from '../redux/slices/orderSlice'
 
 
 function Checkout() {
-
+  const deliveryPrice = 400;
+  const serviceFee = 50;
+  const totalPrice = useSelector((state) => state.newCart.totalPrice);
+  const totalPriceWithFees = totalPrice + deliveryPrice + serviceFee
  
 const {items} = useSelector((state) => state.newCart);
 const [showPayment,setShowPayment]=useState(false)
@@ -41,12 +44,10 @@ const [showPayment,setShowPayment]=useState(false)
   function showConfirmModal(){
     dispatch(Order('openConfirmOrder'))
   }
-  const totalPricePerItem = items.map((item) => +item.price.replace(',', '') * item.quantity);
 
   // Calculate the overall total price of all food products
   // const overallTotalPrice = totalPricePerItem.reduce((total, price) => total + price, 0);
 
-  console.log(totalPricePerItem) 
   let price=0;
   return (
 <div className='checkout-container'>
@@ -83,10 +84,10 @@ const [showPayment,setShowPayment]=useState(false)
   <p className='orders-summary_title'>Summary</p>
 
   <hr className='order-hr'></hr>
-  <div className='order-summary orders-summary_price'><p>Orders</p><p>$ 9000</p></div>
+  <div className='order-summary orders-summary_price'><p>Orders</p><p>$ {totalPrice}</p></div>
   <div className='order-summary orders-summary_delivery'><p>Delivery</p><p>$ 400</p></div>
   <div className='order-summary orders-summary_services'><p>Services</p><p>$ 50</p></div>
-  <div className='order-summary orders-summary_total'><p>TOTAL</p><p>$ 9,450</p></div>
+  <div className='order-summary orders-summary_total'><p>TOTAL</p><p>$ {totalPriceWithFees.toLocaleString()}</p></div>
   <ButtonPill text='CONFIRM ORDER' className='order-confirm-btn' onclick={showConfirmModal}/>
 </div>
 </div>
